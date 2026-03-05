@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agustín Manrique | Desarrollador Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AM<span class="logo-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-line">Hola, soy</span>
+        <span class="hero-name">Agustín<br/>Manrique</span>
+      </h1>
+      <p class="hero-subtitle">
+        Desarrollador Full Stack &middot; Analista de Sistemas
+      </p>
+      <p class="hero-description">
+        Creo experiencias digitales modernas con código limpio y diseño atractivo.
+        Desde e-commerces en producción hasta sistemas de gestión universitaria.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          Ver proyectos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Contactame</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="mouse-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01 — Sobre mí</span>
+        <h2 class="section-title">Transformando ideas<br/>en experiencias digitales</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Tengo 23 años y soy <strong>Licenciado en Ciberseguridad Aplicada</strong>
+            y <strong>Analista de Sistemas</strong> por la
+            <strong>UTN Facultad Regional La Plata</strong>. Combino mi formación
+            en seguridad informática con una pasión por el desarrollo web full stack.
+          </p>
+          <p>
+            Mi experiencia abarca desde el desarrollo de <strong>e-commerces en producción
+            con dominio propio</strong> hasta sistemas de gestión universitaria y
+            plataformas colaborativas. Me especializo en crear interfaces elegantes
+            y backends robustos.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" data-count="5">0</span>
+              <span class="stat-label">Proyectos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Tecnologías</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="1">0</span>
+              <span class="stat-label">E-commerce en producción</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="code-window">
+            <div class="window-bar">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="window-filename">about.ts</span>
+            </div>
+            <pre class="code-content"><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">nombre</span>: <span class="code-string">"Agustín Manrique"</span>,
+  <span class="code-prop">ubicación</span>: <span class="code-string">"La Plata, Argentina"</span>,
+  <span class="code-prop">edad</span>: <span class="code-string">23</span>,
+  <span class="code-prop">título</span>: <span class="code-string">"Lic. Ciberseguridad Aplicada"</span>,
+  <span class="code-prop">rol</span>: <span class="code-string">"Analista de Sistemas"</span>,
+  <span class="code-prop">stack</span>: [
+    <span class="code-string">"React"</span>, <span class="code-string">"TypeScript"</span>,
+    <span class="code-string">"Node.js"</span>, <span class="code-string">"Laravel"</span>,
+    <span class="code-string">"Django"</span>, <span class="code-string">"Supabase"</span>
+  ],
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02 — Proyectos</span>
+        <h2 class="section-title">Trabajo seleccionado</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Roxana Aromaterapia -->
+        <article class="project-card featured reveal">
+          <div class="project-image">
+            <div class="project-gradient grad-1"></div>
+            <div class="project-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <span class="project-badge live">En producción</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-role">Proyecto propio</span>
+            </div>
+            <h3 class="project-title">Roxana Aromaterapia</h3>
+            <p class="project-desc">
+              E-commerce completo para una regalería real en La Plata. Catálogo de productos,
+              carrito de compras, pagos con MercadoPago, panel de administración,
+              notificaciones por email y modo oscuro. Deployeado en dominio propio.
+            </p>
+            <div class="project-tags">
+              <span>React</span><span>TypeScript</span><span>Supabase</span>
+              <span>Tailwind</span><span>MercadoPago</span><span>Netlify</span>
+            </div>
+            <div class="project-links">
+              <a href="https://roxanaaromaterapia.com" target="_blank" rel="noopener" class="project-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Web en vivo
+              </a>
+              <a href="https://github.com/AgustinManrique/roxana-aromaterapia" target="_blank" rel="noopener" class="project-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Maps Asesores -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <div class="project-gradient grad-2"></div>
+            <div class="project-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-role">Colaborador — Equipo de 6</span>
+            </div>
+            <h3 class="project-title">Maps Asesores</h3>
+            <p class="project-desc">
+              Plataforma e-commerce para una aseguradora. Incluye catálogo de productos,
+              carrito de compras, integración de pagos con MercadoPago/Stripe,
+              chatbot con BotMaker y testing con Jest. Proyecto grupal universitario.
+            </p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>Prisma</span>
+              <span>Docker</span><span>Jest</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/lucaslegor/UTN-DS25-GRUPO-08" target="_blank" rel="noopener" class="project-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PAICAT -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <div class="project-gradient grad-3"></div>
+            <div class="project-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 12 3 12 0v-5"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-role">Colaborador</span>
+            </div>
+            <h3 class="project-title">PAICAT</h3>
+            <p class="project-desc">
+              Sistema de gestión integral para el curso de ingreso de la UTN FRLP.
+              Control de asistencia, calificaciones en Física, Matemática y Química,
+              gestión de comisiones, reportes en PDF/Excel y roles de usuario.
+            </p>
+            <div class="project-tags">
+              <span>Laravel 11</span><span>MariaDB</span><span>Tailwind</span>
+              <span>Alpine.js</span><span>Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/FranciscoMontiron/PAICAT" target="_blank" rel="noopener" class="project-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TaskTracker -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <div class="project-gradient grad-4"></div>
+            <div class="project-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-role">Proyecto propio</span>
+            </div>
+            <h3 class="project-title">TaskTracker</h3>
+            <p class="project-desc">
+              Aplicación full stack de gestión de tareas con vista kanban,
+              filtrado avanzado, dark mode, API REST completa y sistema
+              de autenticación. Diseño inspirado en F1.
+            </p>
+            <div class="project-tags">
+              <span>Django</span><span>DRF</span><span>Tailwind</span>
+              <span>SQLite</span><span>REST API</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Torneo de Bar -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <div class="project-gradient grad-5"></div>
+            <div class="project-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-role">Proyecto propio</span>
+            </div>
+            <h3 class="project-title">Torneo de Bar</h3>
+            <p class="project-desc">
+              App interactiva para organizar torneos de pool y fútbol en bares.
+              Sistema de brackets con hasta 16 jugadores, mini-juegos de penales
+              y pool con físicas, y diseño temático dual.
+            </p>
+            <div class="project-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+              <span>localStorage</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03 — Skills</span>
+        <h2 class="section-title">Mi stack tecnológico</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">React</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">TypeScript</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Tailwind CSS</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Alpine.js</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">HTML / CSS / JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Backend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Node.js</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Django</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Laravel</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">REST APIs</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Prisma</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Bases de datos</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Supabase</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">PostgreSQL</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">MariaDB</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">SQLite</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Herramientas</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Git / GitHub</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Docker</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Vite</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Jest</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Netlify</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Ticker -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">React</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">TypeScript</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">Node.js</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">Django</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">Laravel</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">Supabase</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">Tailwind</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">Docker</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">PostgreSQL</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">MercadoPago</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">Git</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-item">Vite</span>
+      <span class="marquee-separator">/</span>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <div class="section-header reveal">
+          <span class="section-tag">04 — Contacto</span>
+          <h2 class="section-title">Trabajemos juntos</h2>
+          <div class="available-badge">
+            <span class="badge-dot"></span>
+            Disponible para trabajar
+          </div>
+        </div>
+        <p class="contact-text reveal">
+          ¿Tenés un proyecto en mente? Me encantaría ayudarte a hacerlo realidad.
+        </p>
+        <div class="contact-links reveal">
+          <a href="mailto:agustinmanriquee@gmail.com" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">agustinmanriquee@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/AgustinManrique" target="_blank" rel="noopener" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">AgustinManrique</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/agustin-manrique-arg" target="_blank" rel="noopener" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">Agustín Manrique</span>
+            </div>
+          </a>
+          <a href="https://wa.me/542213045065?text=Hola%20Agust%C3%ADn%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20contactarte" target="_blank" rel="noopener" class="contact-card whatsapp-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            <div>
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-value">Escribime directamente</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Diseñado y desarrollado por Agustín Manrique &mdash; 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
