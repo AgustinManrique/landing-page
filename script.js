@@ -409,11 +409,11 @@ function initProjectModal() {
       ],
       gradient: 'linear-gradient(135deg, #818cf8, #c084fc, #f472b6)',
       slides: [
-        { title: 'Catálogo de Productos', desc: 'Vista principal con grid adaptativo, filtros por categoría y búsqueda en tiempo real. Diseño responsive de móvil a desktop. Captura en modo oscuro.', icon: 'grid', image: 'images/projects/roxana-catalogo.png' },
-        { title: 'Carrito de Compras', desc: 'Drawer lateral con los productos agregados, control de cantidades, eliminación individual, cálculo de total y botones de finalizar compra o vaciar carrito. Captura en modo oscuro.', icon: 'cart', image: 'images/projects/roxana-carrito.png' },
-        { title: 'Checkout vía WhatsApp', desc: 'Pantalla de finalización con selección de tipo de entrega (retiro en local o envío privado), notas del pedido y botón de WhatsApp que envía el resumen completo al negocio. Captura en modo oscuro.', icon: 'cart', image: 'images/projects/roxana-finalizar-compra.png' },
-        { title: 'Gestión de Productos', desc: 'Tabla CRUD con nombre, descripción, categoría, precio, stock y acciones de editar/eliminar. Botón para agregar nuevos productos con subida de imágenes a Supabase Storage. Captura en modo oscuro.', icon: 'settings', image: 'images/projects/roxana-admin-productos.png' },
-        { title: 'Panel Admin — Estadísticas', desc: 'Dashboard de métricas del negocio: ingresos, pedidos, ticket promedio, entregas. Secciones de productos más vendidos, estado de pedidos y mejores clientes con filtro por período. Captura en modo oscuro.', icon: 'bar-chart', image: 'images/projects/roxana-admin-stats.png' },
+        { title: 'Catálogo de Productos', desc: 'Vista principal con grid adaptativo, filtros por categoría, búsqueda en tiempo real y modo oscuro. Diseño responsive de móvil a desktop.', icon: 'grid', image: 'images/projects/roxana-catalogo.png' },
+        { title: 'Carrito de Compras', desc: 'Drawer lateral con los productos agregados, control de cantidades, eliminación individual, cálculo de total y botones de finalizar compra o vaciar carrito.', icon: 'cart', image: 'images/projects/roxana-carrito.png' },
+        { title: 'Checkout vía WhatsApp', desc: 'Pantalla de finalización con selección de tipo de entrega (retiro en local o envío privado), notas del pedido y botón de WhatsApp que envía el resumen completo al negocio.', icon: 'cart', image: 'images/projects/roxana-finalizar-compra.png' },
+        { title: 'Gestión de Productos', desc: 'Tabla CRUD con nombre, descripción, categoría, precio, stock y acciones de editar/eliminar. Botón para agregar nuevos productos con subida de imágenes a Supabase Storage.', icon: 'settings', image: 'images/projects/roxana-admin-productos.png' },
+        { title: 'Panel Admin — Estadísticas', desc: 'Dashboard de métricas del negocio: ingresos, pedidos, ticket promedio, entregas. Secciones de productos más vendidos, estado de pedidos y mejores clientes con filtro por período.', icon: 'bar-chart', image: 'images/projects/roxana-admin-stats.png' },
       ],
     },
     maps: {
@@ -457,7 +457,6 @@ function initProjectModal() {
       gradient: 'linear-gradient(135deg, #f97316, #ef4444)',
       slides: [
         { title: 'Dashboard', desc: 'Vista principal con cards de tareas agrupadas por estado, estadísticas de progreso, búsqueda y filtros por estado/proyecto.', icon: 'layout', image: 'images/projects/tasktracker-dashboard.png' },
-        { title: 'Login', desc: 'Sistema de autenticación completo con formulario de login y protección de vistas. Diseño F1 con rojo, negro y blanco.', icon: 'shield', image: 'images/projects/tasktracker-login.png' },
         { title: 'Gestión de Tareas', desc: 'Formularios con prioridad, asignación a proyecto, tags, fecha de vencimiento y Work Units (equipos).', icon: 'edit-3' },
         { title: 'API REST', desc: 'API completa con Django REST Framework. Endpoints CRUD para tareas, proyectos, tags y work units.', icon: 'api' },
       ],
