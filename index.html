@@ -98,7 +98,7 @@
               <span class="stat-label">Proyectos</span>
             </div>
             <div class="stat">
-              <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
+              <span class="stat-value"><span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span></span>
               <span class="stat-label">Tecnologías</span>
             </div>
             <div class="stat">
@@ -143,7 +143,7 @@
 
       <div class="projects-grid">
         <!-- Roxana Aromaterapia -->
-        <article class="project-card featured reveal">
+        <article class="project-card featured reveal" data-project="roxana">
           <div class="project-image">
             <div class="project-gradient grad-1"></div>
             <div class="project-icon">
@@ -157,13 +157,13 @@
             </div>
             <h3 class="project-title">Roxana Aromaterapia</h3>
             <p class="project-desc">
-              E-commerce completo para una regalería real en La Plata. Catálogo de productos,
-              carrito de compras, pagos con MercadoPago, panel de administración,
-              notificaciones por email y modo oscuro. Deployeado en dominio propio.
+              E-commerce completo para una regalería en La Plata, actualmente en producción.
+              Catálogo de productos, carrito de compras, checkout vía WhatsApp,
+              panel de administración, notificaciones por email y modo oscuro.
             </p>
             <div class="project-tags">
               <span>React</span><span>TypeScript</span><span>Supabase</span>
-              <span>Tailwind</span><span>MercadoPago</span><span>Netlify</span>
+              <span>Tailwind</span><span>WhatsApp API</span><span>Railway</span>
             </div>
             <div class="project-links">
               <a href="https://www.roxanaaromaterapia.com" target="_blank" rel="noopener" class="project-link">
@@ -179,7 +179,7 @@
         </article>
 
         <!-- Maps Asesores -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-project="maps">
           <div class="project-image">
             <div class="project-gradient grad-2"></div>
             <div class="project-icon">
@@ -188,7 +188,7 @@
           </div>
           <div class="project-body">
             <div class="project-meta">
-              <span class="project-role">Colaborador — Equipo de 6</span>
+              <span class="project-role">Colaborador</span>
             </div>
             <h3 class="project-title">Maps Asesores</h3>
             <p class="project-desc">
@@ -210,7 +210,7 @@
         </article>
 
         <!-- PAICAT -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-project="paicat">
           <div class="project-image">
             <div class="project-gradient grad-3"></div>
             <div class="project-icon">
@@ -241,7 +241,7 @@
         </article>
 
         <!-- TaskTracker -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-project="tasktracker">
           <div class="project-image">
             <div class="project-gradient grad-4"></div>
             <div class="project-icon">
@@ -266,7 +266,7 @@
         </article>
 
         <!-- Torneo de Bar -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-project="torneo">
           <div class="project-image">
             <div class="project-gradient grad-5"></div>
             <div class="project-icon">
@@ -374,7 +374,7 @@
               <span class="skill-name">Jest</span>
             </div>
             <div class="skill-item">
-              <span class="skill-name">Netlify</span>
+              <span class="skill-name">Vercel / Railway</span>
             </div>
           </div>
         </div>
@@ -460,6 +460,41 @@
       </div>
     </div>
   </section>
+
+  <!-- Project Detail Modal -->
+  <div class="project-modal" id="projectModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div class="modal-scroll">
+        <div class="modal-header">
+          <span class="modal-role" id="modalRole"></span>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-desc" id="modalDesc"></p>
+          <div class="modal-tags" id="modalTags"></div>
+          <div class="modal-links" id="modalLinks"></div>
+        </div>
+        <div class="modal-gallery">
+          <div class="gallery-viewport">
+            <div class="gallery-track" id="galleryTrack"></div>
+            <button class="gallery-arrow gallery-prev" id="galleryPrev" aria-label="Anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button class="gallery-arrow gallery-next" id="galleryNext" aria-label="Siguiente">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+          <div class="gallery-info">
+            <h4 class="gallery-slide-title" id="gallerySlideTitle"></h4>
+            <p class="gallery-slide-desc" id="gallerySlideDesc"></p>
+          </div>
+          <div class="gallery-dots" id="galleryDots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
