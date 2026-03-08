@@ -3,6 +3,315 @@
    GSAP + ScrollTrigger + Lenis + ReactBits-inspired FX
    ═══════════════════════════════════════════════════════ */
 
+/* ═══════════════════════════════
+   i18n TRANSLATIONS
+   ═══════════════════════════════ */
+let currentLang = localStorage.getItem('portfolio-lang') || 'es';
+
+const translations = {
+  es: {
+    'nav.about': 'Sobre mí',
+    'nav.projects': 'Proyectos',
+    'nav.skills': 'Skills',
+    'nav.contact': 'Contacto',
+    'hero.greeting': 'Hola, soy',
+    'hero.subtitle': 'Desarrollador Full Stack \u00b7 Analista de Sistemas',
+    'hero.description': 'Creo experiencias digitales modernas con código limpio y diseño atractivo. Desde e-commerces en producción hasta sistemas de gestión universitaria.',
+    'hero.cta.projects': 'Ver proyectos',
+    'hero.cta.contact': 'Contactame',
+    'about.tag': '01 — Sobre mí',
+    'about.title': 'Transformando ideas<br/>en experiencias digitales',
+    'about.p1': 'Tengo 23 años y soy <strong>Licenciado en Ciberseguridad Aplicada</strong> y <strong>Analista de Sistemas</strong> por la <strong>UTN Facultad Regional La Plata</strong>. Combino mi formación en seguridad informática con una pasión por el desarrollo web full stack.',
+    'about.p2': 'Mi experiencia abarca desde el desarrollo de <strong>e-commerces en producción con dominio propio</strong> hasta sistemas de gestión universitaria y plataformas colaborativas. Me especializo en crear interfaces elegantes y backends robustos.',
+    'about.stat1': 'Proyectos',
+    'about.stat2': 'Tecnologías',
+    'about.stat3': 'E-commerce en producción',
+    'code.nombre': 'nombre',
+    'code.ubicacion': 'ubicación',
+    'code.edad': 'edad',
+    'code.titulo': 'título',
+    'code.rol': 'rol',
+    'projects.tag': '02 — Proyectos',
+    'projects.title': 'Trabajo seleccionado',
+    'projects.badge.live': 'En producción',
+    'project.roxana.role': 'Proyecto propio',
+    'project.roxana.desc': 'E-commerce completo para una regalería en La Plata, actualmente en producción. Catálogo de productos, carrito de compras, checkout vía WhatsApp, panel de administración, notificaciones por email y modo oscuro.',
+    'project.roxana.link.web': 'Web en vivo',
+    'project.roxana.link.code': 'Código',
+    'project.maps.role': 'Colaborador',
+    'project.maps.desc': 'Plataforma e-commerce para una aseguradora. Incluye catálogo de productos, carrito de compras, integración de pagos con MercadoPago/Stripe, chatbot con BotMaker y testing con Jest. Proyecto grupal universitario.',
+    'project.maps.link.code': 'Código',
+    'project.paicat.role': 'Colaborador',
+    'project.paicat.desc': 'Sistema de gestión integral para el curso de ingreso de la UTN FRLP. Control de asistencia, calificaciones en Física, Matemática y Química, gestión de comisiones, reportes en PDF/Excel y roles de usuario.',
+    'project.paicat.link.code': 'Código',
+    'project.tasktracker.role': 'Proyecto propio',
+    'project.tasktracker.desc': 'Aplicación full stack de gestión de tareas con vista kanban, filtrado avanzado, dark mode, API REST completa y sistema de autenticación. Diseño inspirado en F1.',
+    'project.torneo.role': 'Proyecto propio',
+    'project.torneo.desc': 'App interactiva para organizar torneos de pool y fútbol en bares. Sistema de brackets con hasta 16 jugadores, mini-juegos de penales y pool con físicas, y diseño temático dual.',
+    'skills.tag': '03 — Skills',
+    'skills.title': 'Mi stack tecnológico',
+    'skills.databases': 'Bases de datos',
+    'skills.tools': 'Herramientas',
+    'contact.tag': '04 — Contacto',
+    'contact.title': 'Trabajemos juntos',
+    'contact.available': 'Disponible para trabajar',
+    'contact.text': '¿Tenés un proyecto en mente? Me encantaría ayudarte a hacerlo realidad.',
+    'contact.whatsapp': 'Escribime directamente',
+    'footer.text': 'Diseñado y desarrollado por Agustín Manrique &mdash; 2026',
+    'meta.title': 'Agustín Manrique | Desarrollador Web',
+  },
+  en: {
+    'nav.about': 'About me',
+    'nav.projects': 'Projects',
+    'nav.skills': 'Skills',
+    'nav.contact': 'Contact',
+    'hero.greeting': "Hi, I'm",
+    'hero.subtitle': 'Full Stack Developer \u00b7 Systems Analyst',
+    'hero.description': 'I create modern digital experiences with clean code and attractive design. From production e-commerces to university management systems.',
+    'hero.cta.projects': 'View projects',
+    'hero.cta.contact': 'Get in touch',
+    'about.tag': '01 — About me',
+    'about.title': 'Transforming ideas<br/>into digital experiences',
+    'about.p1': "I'm 23 years old and hold a <strong>Bachelor's in Applied Cybersecurity</strong> and a <strong>Systems Analyst</strong> degree from <strong>UTN Facultad Regional La Plata</strong>. I combine my cybersecurity background with a passion for full stack web development.",
+    'about.p2': 'My experience ranges from developing <strong>production e-commerces with custom domains</strong> to university management systems and collaborative platforms. I specialize in creating elegant interfaces and robust backends.',
+    'about.stat1': 'Projects',
+    'about.stat2': 'Technologies',
+    'about.stat3': 'E-commerce in production',
+    'code.nombre': 'name',
+    'code.ubicacion': 'location',
+    'code.edad': 'age',
+    'code.titulo': 'degree',
+    'code.rol': 'role',
+    'projects.tag': '02 — Projects',
+    'projects.title': 'Selected work',
+    'projects.badge.live': 'Live',
+    'project.roxana.role': 'Personal project',
+    'project.roxana.desc': 'Complete e-commerce for a gift shop in La Plata, currently in production. Product catalog, shopping cart, WhatsApp checkout, admin panel, email notifications, and dark mode.',
+    'project.roxana.link.web': 'Live site',
+    'project.roxana.link.code': 'Code',
+    'project.maps.role': 'Contributor',
+    'project.maps.desc': 'E-commerce platform for an insurance company. Features product catalog, shopping cart, MercadoPago/Stripe payment integration, BotMaker chatbot, and Jest testing. University group project.',
+    'project.maps.link.code': 'Code',
+    'project.paicat.role': 'Contributor',
+    'project.paicat.desc': 'Comprehensive management system for the admission course at UTN FRLP. Attendance tracking, grades in Physics, Math, and Chemistry, group management, PDF/Excel reports, and user roles.',
+    'project.paicat.link.code': 'Code',
+    'project.tasktracker.role': 'Personal project',
+    'project.tasktracker.desc': 'Full stack task management app with kanban view, advanced filtering, dark mode, complete REST API, and authentication system. F1-inspired design.',
+    'project.torneo.role': 'Personal project',
+    'project.torneo.desc': 'Interactive app for organizing pool and soccer tournaments in bars. Bracket system for up to 16 players, penalty and pool mini-games with physics, and dual-themed design.',
+    'skills.tag': '03 — Skills',
+    'skills.title': 'My tech stack',
+    'skills.databases': 'Databases',
+    'skills.tools': 'Tools',
+    'contact.tag': '04 — Contact',
+    'contact.title': "Let's work together",
+    'contact.available': 'Available for work',
+    'contact.text': "Have a project in mind? I'd love to help you make it a reality.",
+    'contact.whatsapp': 'Message me directly',
+    'footer.text': 'Designed and developed by Agustín Manrique &mdash; 2026',
+    'meta.title': 'Agustín Manrique | Web Developer',
+  },
+};
+
+const projectDataI18n = {
+  es: {
+    roxana: {
+      role: 'Proyecto propio', title: 'Roxana Aromaterapia',
+      desc: 'E-commerce completo para una regalería en La Plata, actualmente en producción. Catálogo de productos, carrito de compras, checkout vía WhatsApp, panel de administración, notificaciones por email y modo oscuro.',
+      tags: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'WhatsApp API', 'Railway'],
+      links: [{ label: 'Web en vivo', url: 'https://www.roxanaaromaterapia.com' }, { label: 'Código', url: 'https://github.com/AgustinManrique/roxana-aromaterapia' }],
+      gradient: 'linear-gradient(135deg, #818cf8, #c084fc, #f472b6)',
+      slides: [
+        { title: 'Catálogo de Productos', desc: 'Vista principal con grid adaptativo, filtros por categoría, búsqueda en tiempo real y modo oscuro. Diseño responsive de móvil a desktop.', icon: 'grid' },
+        { title: 'Carrito de Compras', desc: 'Drawer lateral con los productos agregados, control de cantidades, eliminación individual, cálculo de total y botones de finalizar compra o vaciar carrito.', icon: 'cart' },
+        { title: 'Checkout vía WhatsApp', desc: 'Pantalla de finalización con selección de tipo de entrega (retiro en local o envío privado), notas del pedido y botón de WhatsApp que envía el resumen completo al negocio.', icon: 'cart' },
+        { title: 'Gestión de Productos', desc: 'Tabla CRUD con nombre, descripción, categoría, precio, stock y acciones de editar/eliminar. Botón para agregar nuevos productos con subida de imágenes a Supabase Storage.', icon: 'settings' },
+        { title: 'Panel Admin — Estadísticas', desc: 'Dashboard de métricas del negocio: ingresos, pedidos, ticket promedio, entregas. Secciones de productos más vendidos, estado de pedidos y mejores clientes con filtro por período.', icon: 'bar-chart' },
+      ],
+    },
+    maps: {
+      role: 'Colaborador', title: 'Maps Asesores',
+      desc: 'Plataforma e-commerce para una aseguradora. Catálogo de productos, carrito de compras, integración de pagos con MercadoPago/Stripe, chatbot con BotMaker y testing con Jest. Proyecto grupal universitario.',
+      tags: ['React', 'Node.js', 'Prisma', 'Docker', 'Jest'],
+      links: [{ label: 'Código', url: 'https://github.com/lucaslegor/UTN-DS25-GRUPO-08' }],
+      gradient: 'linear-gradient(135deg, #22d3ee, #818cf8)',
+      slides: [
+        { title: 'Catálogo de Seguros', desc: 'Vitrina de productos de la aseguradora con categorías, filtros y detalle de cada plan de cobertura.', icon: 'shield' },
+        { title: 'Carrito y Checkout', desc: 'Proceso de compra completo con selección de planes, resumen de cobertura y pasarela de pago integrada.', icon: 'cart' },
+        { title: 'Chatbot BotMaker', desc: 'Asistente virtual integrado para consultas de clientes sobre coberturas, precios y procesos de contratación.', icon: 'bot' },
+        { title: 'Testing con Jest', desc: 'Suite completa de tests unitarios y de integración con Jest para asegurar la calidad y estabilidad del código.', icon: 'test' },
+      ],
+    },
+    paicat: {
+      role: 'Colaborador', title: 'PAICAT',
+      desc: 'Sistema de gestión integral para el curso de ingreso de la UTN FRLP. Control de asistencia, calificaciones en Física, Matemática y Química, gestión de comisiones, reportes en PDF/Excel y roles de usuario.',
+      tags: ['Laravel 11', 'MariaDB', 'Tailwind', 'Alpine.js', 'Docker'],
+      links: [{ label: 'Código', url: 'https://github.com/FranciscoMontiron/PAICAT' }],
+      gradient: 'linear-gradient(135deg, #34d399, #22d3ee)',
+      slides: [
+        { title: 'Dashboard Principal', desc: 'Panel de control con métricas del curso de ingreso: cantidad de alumnos, asistencia general, promedios por materia y alertas.', icon: 'layout' },
+        { title: 'Control de Asistencia', desc: 'Registro de asistencia por comisión con vista de calendario, porcentajes y alertas por inasistencias.', icon: 'clipboard-list' },
+        { title: 'Calificaciones', desc: 'Sistema de notas para Física, Matemática y Química con promedios automáticos, parciales y recuperatorios.', icon: 'bar-chart' },
+        { title: 'Reportes PDF/Excel', desc: 'Generación automática de reportes exportables con datos de asistencia, calificaciones y estadísticas por comisión.', icon: 'file-text' },
+      ],
+    },
+    tasktracker: {
+      role: 'Proyecto propio', title: 'TaskTracker',
+      desc: 'Aplicación full stack de gestión de tareas con vista kanban, filtrado avanzado, dark mode, API REST completa y sistema de autenticación. Diseño inspirado en F1.',
+      tags: ['Django', 'DRF', 'Tailwind', 'SQLite', 'REST API'],
+      links: [],
+      gradient: 'linear-gradient(135deg, #f97316, #ef4444)',
+      slides: [
+        { title: 'Dashboard', desc: 'Vista principal con cards de tareas agrupadas por estado, estadísticas de progreso, búsqueda y filtros por estado/proyecto.', icon: 'layout' },
+        { title: 'Gestión de Tareas', desc: 'Formularios con prioridad, asignación a proyecto, tags, fecha de vencimiento y Work Units (equipos).', icon: 'edit-3' },
+        { title: 'API REST', desc: 'API completa con Django REST Framework. Endpoints CRUD para tareas, proyectos, tags y work units.', icon: 'api' },
+      ],
+    },
+    torneo: {
+      role: 'Proyecto propio', title: 'Torneo de Bar',
+      desc: 'App interactiva para organizar torneos de pool y fútbol en bares. Sistema de brackets con hasta 16 jugadores, mini-juegos de penales y pool con físicas, y diseño temático dual.',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'localStorage'],
+      links: [],
+      gradient: 'linear-gradient(135deg, #eab308, #f97316)',
+      slides: [
+        { title: 'Mesa de Pool Interactiva', desc: 'Interfaz principal con mesa de pool visual donde las troneras sirven como botones para seleccionar el formato del torneo (2 a 16 jugadores).', icon: 'target' },
+        { title: 'Mini-Juego de Pool', desc: 'Simulación de tiros con bola blanca, colisiones físicas, detección de troneras, contador de tiros y mejores puntajes guardados en localStorage.', icon: 'target' },
+        { title: 'Brackets del Torneo', desc: 'Visualización de llaves con progresión automática de ganadores. Soporte para modo pool y modo fútbol.', icon: 'table' },
+        { title: 'Mini-Juego de Penales', desc: 'Juego interactivo de penales con arquero controlado por IA, sistema de rachas y high score persistente.', icon: 'zap' },
+      ],
+    },
+  },
+  en: {
+    roxana: {
+      role: 'Personal project', title: 'Roxana Aromaterapia',
+      desc: 'Complete e-commerce for a gift shop in La Plata, currently in production. Product catalog, shopping cart, WhatsApp checkout, admin panel, email notifications, and dark mode.',
+      tags: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'WhatsApp API', 'Railway'],
+      links: [{ label: 'Live site', url: 'https://www.roxanaaromaterapia.com' }, { label: 'Code', url: 'https://github.com/AgustinManrique/roxana-aromaterapia' }],
+      gradient: 'linear-gradient(135deg, #818cf8, #c084fc, #f472b6)',
+      slides: [
+        { title: 'Product Catalog', desc: 'Main view with adaptive grid, category filters, real-time search, and dark mode. Responsive design from mobile to desktop.', icon: 'grid' },
+        { title: 'Shopping Cart', desc: 'Side drawer with added products, quantity controls, individual removal, total calculation, and checkout or empty cart buttons.', icon: 'cart' },
+        { title: 'WhatsApp Checkout', desc: 'Checkout screen with delivery type selection (store pickup or private shipping), order notes, and WhatsApp button that sends the full summary to the business.', icon: 'cart' },
+        { title: 'Product Management', desc: 'CRUD table with name, description, category, price, stock, and edit/delete actions. Button to add new products with image upload to Supabase Storage.', icon: 'settings' },
+        { title: 'Admin Panel — Stats', desc: 'Business metrics dashboard: revenue, orders, average ticket, deliveries. Sections for best-selling products, order status, and top customers with period filter.', icon: 'bar-chart' },
+      ],
+    },
+    maps: {
+      role: 'Contributor', title: 'Maps Asesores',
+      desc: 'E-commerce platform for an insurance company. Features product catalog, shopping cart, MercadoPago/Stripe payment integration, BotMaker chatbot, and Jest testing. University group project.',
+      tags: ['React', 'Node.js', 'Prisma', 'Docker', 'Jest'],
+      links: [{ label: 'Code', url: 'https://github.com/lucaslegor/UTN-DS25-GRUPO-08' }],
+      gradient: 'linear-gradient(135deg, #22d3ee, #818cf8)',
+      slides: [
+        { title: 'Insurance Catalog', desc: 'Insurance product showcase with categories, filters, and coverage plan details.', icon: 'shield' },
+        { title: 'Cart & Checkout', desc: 'Complete purchase flow with plan selection, coverage summary, and integrated payment gateway.', icon: 'cart' },
+        { title: 'BotMaker Chatbot', desc: 'Integrated virtual assistant for client inquiries about coverages, prices, and hiring processes.', icon: 'bot' },
+        { title: 'Jest Testing', desc: 'Complete suite of unit and integration tests with Jest to ensure code quality and stability.', icon: 'test' },
+      ],
+    },
+    paicat: {
+      role: 'Contributor', title: 'PAICAT',
+      desc: 'Comprehensive management system for the admission course at UTN FRLP. Attendance tracking, grades in Physics, Math, and Chemistry, group management, PDF/Excel reports, and user roles.',
+      tags: ['Laravel 11', 'MariaDB', 'Tailwind', 'Alpine.js', 'Docker'],
+      links: [{ label: 'Code', url: 'https://github.com/FranciscoMontiron/PAICAT' }],
+      gradient: 'linear-gradient(135deg, #34d399, #22d3ee)',
+      slides: [
+        { title: 'Main Dashboard', desc: 'Control panel with admission course metrics: student count, overall attendance, subject averages, and alerts.', icon: 'layout' },
+        { title: 'Attendance Tracking', desc: 'Attendance log by group with calendar view, percentages, and absence alerts.', icon: 'clipboard-list' },
+        { title: 'Grades', desc: 'Grading system for Physics, Math, and Chemistry with automatic averages, midterms, and retakes.', icon: 'bar-chart' },
+        { title: 'PDF/Excel Reports', desc: 'Automatic generation of exportable reports with attendance, grades, and statistics by group.', icon: 'file-text' },
+      ],
+    },
+    tasktracker: {
+      role: 'Personal project', title: 'TaskTracker',
+      desc: 'Full stack task management app with kanban view, advanced filtering, dark mode, complete REST API, and authentication system. F1-inspired design.',
+      tags: ['Django', 'DRF', 'Tailwind', 'SQLite', 'REST API'],
+      links: [],
+      gradient: 'linear-gradient(135deg, #f97316, #ef4444)',
+      slides: [
+        { title: 'Dashboard', desc: 'Main view with task cards grouped by status, progress stats, search, and filters by status/project.', icon: 'layout' },
+        { title: 'Task Management', desc: 'Forms with priority, project assignment, tags, due date, and Work Units (teams).', icon: 'edit-3' },
+        { title: 'REST API', desc: 'Full API with Django REST Framework. CRUD endpoints for tasks, projects, tags, and work units.', icon: 'api' },
+      ],
+    },
+    torneo: {
+      role: 'Personal project', title: 'Torneo de Bar',
+      desc: 'Interactive app for organizing pool and soccer tournaments in bars. Bracket system for up to 16 players, penalty and pool mini-games with physics, and dual-themed design.',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'localStorage'],
+      links: [],
+      gradient: 'linear-gradient(135deg, #eab308, #f97316)',
+      slides: [
+        { title: 'Interactive Pool Table', desc: 'Main interface with a visual pool table where pockets serve as buttons to select the tournament format (2 to 16 players).', icon: 'target' },
+        { title: 'Pool Mini-Game', desc: 'Shot simulation with cue ball, physical collisions, pocket detection, shot counter, and high scores saved in localStorage.', icon: 'target' },
+        { title: 'Tournament Brackets', desc: 'Bracket visualization with automatic winner progression. Support for pool and soccer modes.', icon: 'table' },
+        { title: 'Penalty Mini-Game', desc: 'Interactive penalty game with AI-controlled goalkeeper, streak system, and persistent high score.', icon: 'zap' },
+      ],
+    },
+  },
+};
+
+let projectData = projectDataI18n[currentLang];
+
+function applyTranslations(lang) {
+  document.documentElement.lang = lang;
+  document.title = translations[lang]['meta.title'];
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) el.textContent = translations[lang][key];
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-html');
+    if (translations[lang][key]) el.innerHTML = translations[lang][key];
+  });
+
+  projectData = projectDataI18n[lang];
+
+  // Update expand buttons aria-labels
+  const expandLabel = lang === 'es' ? 'Ver detalles' : 'View details';
+  document.querySelectorAll('.project-expand').forEach((btn) => {
+    btn.setAttribute('aria-label', expandLabel);
+  });
+
+  // Update WhatsApp link
+  const waCard = document.querySelector('.whatsapp-card');
+  if (waCard) {
+    const msg = lang === 'es'
+      ? 'Hola%20Agust%C3%ADn%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20contactarte'
+      : 'Hi%20Agust%C3%ADn%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20get%20in%20touch';
+    waCard.href = `https://wa.me/542213045065?text=${msg}`;
+  }
+
+  // Sync all toggle UIs
+  document.querySelectorAll('.lang-toggle').forEach((toggle) => {
+    toggle.querySelectorAll('.lang-option').forEach((opt) => {
+      opt.classList.toggle('active', opt.dataset.lang === lang);
+    });
+  });
+
+  // Re-render modal if open
+  const modal = document.getElementById('projectModal');
+  if (modal && modal.classList.contains('active') && window.__currentProjectId) {
+    window.__openModal(window.__currentProjectId);
+  }
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('portfolio-lang', lang);
+  applyTranslations(lang);
+}
+
+function initLangToggle() {
+  applyTranslations(currentLang);
+  document.querySelectorAll('.lang-toggle').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      setLanguage(currentLang === 'es' ? 'en' : 'es');
+    });
+  });
+}
+
 function loadScript(src) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
@@ -23,6 +332,7 @@ async function boot() {
   initLenis();
   initNavbar();
   initMobileMenu();
+  initLangToggle();
   initSplitText();
   initHeroAnimations();
   initScrollReveal();
@@ -374,6 +684,7 @@ function initProjectModal() {
 
   let currentSlide = 0;
   let currentProject = null;
+  window.__currentProjectId = null;
 
   const icons = {
     grid: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
@@ -397,86 +708,6 @@ function initProjectModal() {
     zap: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>',
   };
 
-  const projectData = {
-    roxana: {
-      role: 'Proyecto propio',
-      title: 'Roxana Aromaterapia',
-      desc: 'E-commerce completo para una regalería en La Plata, actualmente en producción. Catálogo de productos, carrito de compras, checkout vía WhatsApp, panel de administración, notificaciones por email y modo oscuro.',
-      tags: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'WhatsApp API', 'Railway'],
-      links: [
-        { label: 'Web en vivo', url: 'https://www.roxanaaromaterapia.com' },
-        { label: 'Código', url: 'https://github.com/AgustinManrique/roxana-aromaterapia' },
-      ],
-      gradient: 'linear-gradient(135deg, #818cf8, #c084fc, #f472b6)',
-      slides: [
-        { title: 'Catálogo de Productos', desc: 'Vista principal con grid adaptativo, filtros por categoría, búsqueda en tiempo real y modo oscuro. Diseño responsive de móvil a desktop.', icon: 'grid', image: 'images/projects/roxana-catalogo.png' },
-        { title: 'Carrito de Compras', desc: 'Drawer lateral con los productos agregados, control de cantidades, eliminación individual, cálculo de total y botones de finalizar compra o vaciar carrito.', icon: 'cart', image: 'images/projects/roxana-carrito.png' },
-        { title: 'Checkout vía WhatsApp', desc: 'Pantalla de finalización con selección de tipo de entrega (retiro en local o envío privado), notas del pedido y botón de WhatsApp que envía el resumen completo al negocio.', icon: 'cart', image: 'images/projects/roxana-finalizar-compra.png' },
-        { title: 'Gestión de Productos', desc: 'Tabla CRUD con nombre, descripción, categoría, precio, stock y acciones de editar/eliminar. Botón para agregar nuevos productos con subida de imágenes a Supabase Storage.', icon: 'settings', image: 'images/projects/roxana-admin-productos.png' },
-        { title: 'Panel Admin — Estadísticas', desc: 'Dashboard de métricas del negocio: ingresos, pedidos, ticket promedio, entregas. Secciones de productos más vendidos, estado de pedidos y mejores clientes con filtro por período.', icon: 'bar-chart', image: 'images/projects/roxana-admin-stats.png' },
-      ],
-    },
-    maps: {
-      role: 'Colaborador',
-      title: 'Maps Asesores',
-      desc: 'Plataforma e-commerce para una aseguradora. Catálogo de productos, carrito de compras, integración de pagos con MercadoPago/Stripe, chatbot con BotMaker y testing con Jest. Proyecto grupal universitario.',
-      tags: ['React', 'Node.js', 'Prisma', 'Docker', 'Jest'],
-      links: [
-        { label: 'Código', url: 'https://github.com/lucaslegor/UTN-DS25-GRUPO-08' },
-      ],
-      gradient: 'linear-gradient(135deg, #22d3ee, #818cf8)',
-      slides: [
-        { title: 'Catálogo de Seguros', desc: 'Vitrina de productos de la aseguradora con categorías, filtros y detalle de cada plan de cobertura.', icon: 'shield' },
-        { title: 'Carrito y Checkout', desc: 'Proceso de compra completo con selección de planes, resumen de cobertura y pasarela de pago integrada.', icon: 'cart' },
-        { title: 'Chatbot BotMaker', desc: 'Asistente virtual integrado para consultas de clientes sobre coberturas, precios y procesos de contratación.', icon: 'bot' },
-        { title: 'Testing con Jest', desc: 'Suite completa de tests unitarios y de integración con Jest para asegurar la calidad y estabilidad del código.', icon: 'test' },
-      ],
-    },
-    paicat: {
-      role: 'Colaborador',
-      title: 'PAICAT',
-      desc: 'Sistema de gestión integral para el curso de ingreso de la UTN FRLP. Control de asistencia, calificaciones en Física, Matemática y Química, gestión de comisiones, reportes en PDF/Excel y roles de usuario.',
-      tags: ['Laravel 11', 'MariaDB', 'Tailwind', 'Alpine.js', 'Docker'],
-      links: [
-        { label: 'Código', url: 'https://github.com/FranciscoMontiron/PAICAT' },
-      ],
-      gradient: 'linear-gradient(135deg, #34d399, #22d3ee)',
-      slides: [
-        { title: 'Dashboard Principal', desc: 'Panel de control con métricas del curso de ingreso: cantidad de alumnos, asistencia general, promedios por materia y alertas.', icon: 'layout' },
-        { title: 'Control de Asistencia', desc: 'Registro de asistencia por comisión con vista de calendario, porcentajes y alertas por inasistencias.', icon: 'clipboard-list' },
-        { title: 'Calificaciones', desc: 'Sistema de notas para Física, Matemática y Química con promedios automáticos, parciales y recuperatorios.', icon: 'bar-chart' },
-        { title: 'Reportes PDF/Excel', desc: 'Generación automática de reportes exportables con datos de asistencia, calificaciones y estadísticas por comisión.', icon: 'file-text' },
-      ],
-    },
-    tasktracker: {
-      role: 'Proyecto propio',
-      title: 'TaskTracker',
-      desc: 'Aplicación full stack de gestión de tareas con vista kanban, filtrado avanzado, dark mode, API REST completa y sistema de autenticación. Diseño inspirado en F1.',
-      tags: ['Django', 'DRF', 'Tailwind', 'SQLite', 'REST API'],
-      links: [],
-      gradient: 'linear-gradient(135deg, #f97316, #ef4444)',
-      slides: [
-        { title: 'Dashboard', desc: 'Vista principal con cards de tareas agrupadas por estado, estadísticas de progreso, búsqueda y filtros por estado/proyecto.', icon: 'layout', image: 'images/projects/tasktracker-dashboard.png' },
-        { title: 'Gestión de Tareas', desc: 'Formularios con prioridad, asignación a proyecto, tags, fecha de vencimiento y Work Units (equipos).', icon: 'edit-3' },
-        { title: 'API REST', desc: 'API completa con Django REST Framework. Endpoints CRUD para tareas, proyectos, tags y work units.', icon: 'api' },
-      ],
-    },
-    torneo: {
-      role: 'Proyecto propio',
-      title: 'Torneo de Bar',
-      desc: 'App interactiva para organizar torneos de pool y fútbol en bares. Sistema de brackets con hasta 16 jugadores, mini-juegos de penales y pool con físicas, y diseño temático dual.',
-      tags: ['HTML5', 'CSS3', 'JavaScript', 'localStorage'],
-      links: [],
-      gradient: 'linear-gradient(135deg, #eab308, #f97316)',
-      slides: [
-        { title: 'Mesa de Pool Interactiva', desc: 'Interfaz principal con mesa de pool visual donde las troneras sirven como botones para seleccionar el formato del torneo (2 a 16 jugadores).', icon: 'target', image: 'images/projects/torneo-pool.png' },
-        { title: 'Mini-Juego de Pool', desc: 'Simulación de tiros con bola blanca, colisiones físicas, detección de troneras, contador de tiros y mejores puntajes guardados en localStorage.', icon: 'target', image: 'images/projects/torneo-setup.png' },
-        { title: 'Brackets del Torneo', desc: 'Visualización de llaves con progresión automática de ganadores. Soporte para modo pool y modo fútbol.', icon: 'table', image: 'images/projects/torneo-brackets.png' },
-        { title: 'Mini-Juego de Penales', desc: 'Juego interactivo de penales con arquero controlado por IA, sistema de rachas y high score persistente.', icon: 'zap' },
-      ],
-    },
-  };
-
   // Inject expand buttons into cards
   document.querySelectorAll('.project-card[data-project]').forEach((card) => {
     const btn = document.createElement('button');
@@ -490,6 +721,7 @@ function initProjectModal() {
   function openModal(projectId) {
     currentProject = projectData[projectId];
     if (!currentProject) return;
+    window.__currentProjectId = projectId;
     currentSlide = 0;
 
     document.getElementById('modalRole').textContent = currentProject.role;
@@ -534,9 +766,12 @@ function initProjectModal() {
     if (window.__lenis) window.__lenis.stop();
   }
 
+  window.__openModal = openModal;
+
   function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
+    window.__currentProjectId = null;
     if (window.__lenis) window.__lenis.start();
   }
 

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agustín Manrique | Desarrollador Web</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -15,25 +16,41 @@
     <div class="nav-container">
       <a href="#hero" class="nav-logo">AM<span class="logo-dot">.</span></a>
       <ul class="nav-links">
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+        <li class="nav-lang-item">
+          <button class="lang-toggle" aria-label="Switch language">
+            <span class="lang-option active" data-lang="es">ES</span>
+            <span class="lang-option" data-lang="en">EN</span>
+          </button>
+        </li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="lang-toggle lang-toggle-mobile" aria-label="Switch language">
+          <span class="lang-option active" data-lang="es">ES</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contacto</a></li>
+      <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
     </ul>
+    <button class="lang-toggle lang-toggle-menu" aria-label="Switch language">
+      <span class="lang-option active" data-lang="es">ES</span>
+      <span class="lang-option" data-lang="en">EN</span>
+    </button>
   </div>
 
   <!-- Hero -->
@@ -46,22 +63,22 @@
     </div>
     <div class="hero-content">
       <h1 class="hero-title">
-        <span class="hero-line">Hola, soy</span>
+        <span class="hero-line" data-i18n="hero.greeting">Hola, soy</span>
         <span class="hero-name">Agustín<br/>Manrique</span>
       </h1>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
         Desarrollador Full Stack &middot; Analista de Sistemas
       </p>
-      <p class="hero-description">
+      <p class="hero-description" data-i18n="hero.description">
         Creo experiencias digitales modernas con código limpio y diseño atractivo.
         Desde e-commerces en producción hasta sistemas de gestión universitaria.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">
-          Ver proyectos
+          <span data-i18n="hero.cta.projects">Ver proyectos</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
         </a>
-        <a href="#contact" class="btn btn-ghost">Contactame</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.contact">Contactame</a>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -75,18 +92,18 @@
   <section class="section about" id="about">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">01 — Sobre mí</span>
-        <h2 class="section-title">Transformando ideas<br/>en experiencias digitales</h2>
+        <span class="section-tag" data-i18n="about.tag">01 — Sobre mí</span>
+        <h2 class="section-title" data-i18n-html="about.title">Transformando ideas<br/>en experiencias digitales</h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>
+          <p data-i18n-html="about.p1">
             Tengo 23 años y soy <strong>Licenciado en Ciberseguridad Aplicada</strong>
             y <strong>Analista de Sistemas</strong> por la
             <strong>UTN Facultad Regional La Plata</strong>. Combino mi formación
             en seguridad informática con una pasión por el desarrollo web full stack.
           </p>
-          <p>
+          <p data-i18n-html="about.p2">
             Mi experiencia abarca desde el desarrollo de <strong>e-commerces en producción
             con dominio propio</strong> hasta sistemas de gestión universitaria y
             plataformas colaborativas. Me especializo en crear interfaces elegantes
@@ -95,15 +112,15 @@
           <div class="about-stats">
             <div class="stat">
               <span class="stat-number" data-count="5">0</span>
-              <span class="stat-label">Proyectos</span>
+              <span class="stat-label" data-i18n="about.stat1">Proyectos</span>
             </div>
             <div class="stat">
               <span class="stat-value"><span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span></span>
-              <span class="stat-label">Tecnologías</span>
+              <span class="stat-label" data-i18n="about.stat2">Tecnologías</span>
             </div>
             <div class="stat">
               <span class="stat-number" data-count="1">0</span>
-              <span class="stat-label">E-commerce en producción</span>
+              <span class="stat-label" data-i18n="about.stat3">E-commerce en producción</span>
             </div>
           </div>
         </div>
@@ -116,11 +133,11 @@
               <span class="window-filename">about.ts</span>
             </div>
             <pre class="code-content"><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
-  <span class="code-prop">nombre</span>: <span class="code-string">"Agustín Manrique"</span>,
-  <span class="code-prop">ubicación</span>: <span class="code-string">"La Plata, Argentina"</span>,
-  <span class="code-prop">edad</span>: <span class="code-string">23</span>,
-  <span class="code-prop">título</span>: <span class="code-string">"Lic. Ciberseguridad Aplicada"</span>,
-  <span class="code-prop">rol</span>: <span class="code-string">"Analista de Sistemas"</span>,
+  <span class="code-prop" data-i18n="code.nombre">nombre</span>: <span class="code-string">"Agustín Manrique"</span>,
+  <span class="code-prop" data-i18n="code.ubicacion">ubicación</span>: <span class="code-string">"La Plata, Argentina"</span>,
+  <span class="code-prop" data-i18n="code.edad">edad</span>: <span class="code-string">23</span>,
+  <span class="code-prop" data-i18n="code.titulo">título</span>: <span class="code-string">"Lic. Ciberseguridad Aplicada"</span>,
+  <span class="code-prop" data-i18n="code.rol">rol</span>: <span class="code-string">"Analista de Sistemas"</span>,
   <span class="code-prop">stack</span>: [
     <span class="code-string">"React"</span>, <span class="code-string">"TypeScript"</span>,
     <span class="code-string">"Node.js"</span>, <span class="code-string">"Laravel"</span>,
@@ -137,8 +154,8 @@
   <section class="section projects" id="projects">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">02 — Proyectos</span>
-        <h2 class="section-title">Trabajo seleccionado</h2>
+        <span class="section-tag" data-i18n="projects.tag">02 — Proyectos</span>
+        <h2 class="section-title" data-i18n="projects.title">Trabajo seleccionado</h2>
       </div>
 
       <div class="projects-grid">
@@ -149,14 +166,14 @@
             <div class="project-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             </div>
-            <span class="project-badge live">En producción</span>
+            <span class="project-badge live" data-i18n="projects.badge.live">En producción</span>
           </div>
           <div class="project-body">
             <div class="project-meta">
-              <span class="project-role">Proyecto propio</span>
+              <span class="project-role" data-i18n="project.roxana.role">Proyecto propio</span>
             </div>
             <h3 class="project-title">Roxana Aromaterapia</h3>
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="project.roxana.desc">
               E-commerce completo para una regalería en La Plata, actualmente en producción.
               Catálogo de productos, carrito de compras, checkout vía WhatsApp,
               panel de administración, notificaciones por email y modo oscuro.
@@ -168,11 +185,11 @@
             <div class="project-links">
               <a href="https://www.roxanaaromaterapia.com" target="_blank" rel="noopener" class="project-link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Web en vivo
+                <span data-i18n="project.roxana.link.web">Web en vivo</span>
               </a>
               <a href="https://github.com/AgustinManrique/roxana-aromaterapia" target="_blank" rel="noopener" class="project-link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                Código
+                <span data-i18n="project.roxana.link.code">Código</span>
               </a>
             </div>
           </div>
@@ -188,10 +205,10 @@
           </div>
           <div class="project-body">
             <div class="project-meta">
-              <span class="project-role">Colaborador</span>
+              <span class="project-role" data-i18n="project.maps.role">Colaborador</span>
             </div>
             <h3 class="project-title">Maps Asesores</h3>
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="project.maps.desc">
               Plataforma e-commerce para una aseguradora. Incluye catálogo de productos,
               carrito de compras, integración de pagos con MercadoPago/Stripe,
               chatbot con BotMaker y testing con Jest. Proyecto grupal universitario.
@@ -203,7 +220,7 @@
             <div class="project-links">
               <a href="https://github.com/lucaslegor/UTN-DS25-GRUPO-08" target="_blank" rel="noopener" class="project-link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                Código
+                <span data-i18n="project.maps.link.code">Código</span>
               </a>
             </div>
           </div>
@@ -219,10 +236,10 @@
           </div>
           <div class="project-body">
             <div class="project-meta">
-              <span class="project-role">Colaborador</span>
+              <span class="project-role" data-i18n="project.paicat.role">Colaborador</span>
             </div>
             <h3 class="project-title">PAICAT</h3>
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="project.paicat.desc">
               Sistema de gestión integral para el curso de ingreso de la UTN FRLP.
               Control de asistencia, calificaciones en Física, Matemática y Química,
               gestión de comisiones, reportes en PDF/Excel y roles de usuario.
@@ -234,7 +251,7 @@
             <div class="project-links">
               <a href="https://github.com/FranciscoMontiron/PAICAT" target="_blank" rel="noopener" class="project-link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                Código
+                <span data-i18n="project.paicat.link.code">Código</span>
               </a>
             </div>
           </div>
@@ -250,10 +267,10 @@
           </div>
           <div class="project-body">
             <div class="project-meta">
-              <span class="project-role">Proyecto propio</span>
+              <span class="project-role" data-i18n="project.tasktracker.role">Proyecto propio</span>
             </div>
             <h3 class="project-title">TaskTracker</h3>
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="project.tasktracker.desc">
               Aplicación full stack de gestión de tareas con vista kanban,
               filtrado avanzado, dark mode, API REST completa y sistema
               de autenticación. Diseño inspirado en F1.
@@ -275,10 +292,10 @@
           </div>
           <div class="project-body">
             <div class="project-meta">
-              <span class="project-role">Proyecto propio</span>
+              <span class="project-role" data-i18n="project.torneo.role">Proyecto propio</span>
             </div>
             <h3 class="project-title">Torneo de Bar</h3>
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="project.torneo.desc">
               App interactiva para organizar torneos de pool y fútbol en bares.
               Sistema de brackets con hasta 16 jugadores, mini-juegos de penales
               y pool con físicas, y diseño temático dual.
@@ -297,8 +314,8 @@
   <section class="section skills" id="skills">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">03 — Skills</span>
-        <h2 class="section-title">Mi stack tecnológico</h2>
+        <span class="section-tag" data-i18n="skills.tag">03 — Skills</span>
+        <h2 class="section-title" data-i18n="skills.title">Mi stack tecnológico</h2>
       </div>
       <div class="skills-grid">
         <div class="skill-group reveal">
@@ -342,7 +359,7 @@
           </div>
         </div>
         <div class="skill-group reveal">
-          <h3 class="skill-group-title">Bases de datos</h3>
+          <h3 class="skill-group-title" data-i18n="skills.databases">Bases de datos</h3>
           <div class="skill-items">
             <div class="skill-item">
               <span class="skill-name">Supabase</span>
@@ -359,7 +376,7 @@
           </div>
         </div>
         <div class="skill-group reveal">
-          <h3 class="skill-group-title">Herramientas</h3>
+          <h3 class="skill-group-title" data-i18n="skills.tools">Herramientas</h3>
           <div class="skill-items">
             <div class="skill-item">
               <span class="skill-name">Git / GitHub</span>
@@ -417,14 +434,14 @@
     <div class="container">
       <div class="contact-content">
         <div class="section-header reveal">
-          <span class="section-tag">04 — Contacto</span>
-          <h2 class="section-title">Trabajemos juntos</h2>
+          <span class="section-tag" data-i18n="contact.tag">04 — Contacto</span>
+          <h2 class="section-title" data-i18n="contact.title">Trabajemos juntos</h2>
           <div class="available-badge">
             <span class="badge-dot"></span>
-            Disponible para trabajar
+            <span data-i18n="contact.available">Disponible para trabajar</span>
           </div>
         </div>
-        <p class="contact-text reveal">
+        <p class="contact-text reveal" data-i18n="contact.text">
           ¿Tenés un proyecto en mente? Me encantaría ayudarte a hacerlo realidad.
         </p>
         <div class="contact-links reveal">
@@ -453,7 +470,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
             <div>
               <span class="contact-label">WhatsApp</span>
-              <span class="contact-value">Escribime directamente</span>
+              <span class="contact-value" data-i18n="contact.whatsapp">Escribime directamente</span>
             </div>
           </a>
         </div>
@@ -499,7 +516,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>Diseñado y desarrollado por Agustín Manrique &mdash; 2026</p>
+      <p data-i18n-html="footer.text">Diseñado y desarrollado por Agustín Manrique &mdash; 2026</p>
     </div>
   </footer>
 
