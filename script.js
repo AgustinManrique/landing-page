@@ -25,7 +25,7 @@ const translations = {
     'about.p2': 'Mi experiencia abarca desde el desarrollo de <strong>e-commerces en producción con dominio propio</strong> hasta sistemas de gestión universitaria y plataformas colaborativas. Me especializo en crear interfaces elegantes y backends robustos.',
     'about.stat1': 'Proyectos',
     'about.stat2': 'Tecnologías',
-    'about.stat3': 'E-commerce en producción',
+    'about.stat3': 'En producción',
     'code.nombre': 'nombre',
     'code.ubicacion': 'ubicación',
     'code.edad': 'edad',
@@ -34,6 +34,10 @@ const translations = {
     'projects.tag': '02 — Proyectos',
     'projects.title': 'Trabajo seleccionado',
     'projects.badge.live': 'En producción',
+    'project.planestudio.role': 'Proyecto propio',
+    'project.planestudio.desc': 'Plataforma web para que estudiantes universitarios visualicen su avance académico. Malla curricular interactiva con correlativas, doble promedio, filtros por estado, estadísticas y soporte multi-carrera. Usada por alumnos de la UNLP.',
+    'project.planestudio.link.web': 'Web en vivo',
+    'project.planestudio.link.code': 'Código',
     'project.roxana.role': 'Proyecto propio',
     'project.roxana.desc': 'E-commerce completo para una regalería en La Plata, actualmente en producción. Catálogo de productos, carrito de compras, checkout vía WhatsApp, panel de administración, notificaciones por email y modo oscuro.',
     'project.roxana.link.web': 'Web en vivo',
@@ -76,7 +80,7 @@ const translations = {
     'about.p2': 'My experience ranges from developing <strong>production e-commerces with custom domains</strong> to university management systems and collaborative platforms. I specialize in creating elegant interfaces and robust backends.',
     'about.stat1': 'Projects',
     'about.stat2': 'Technologies',
-    'about.stat3': 'E-commerce in production',
+    'about.stat3': 'In production',
     'code.nombre': 'name',
     'code.ubicacion': 'location',
     'code.edad': 'age',
@@ -85,6 +89,10 @@ const translations = {
     'projects.tag': '02 — Projects',
     'projects.title': 'Selected work',
     'projects.badge.live': 'Live',
+    'project.planestudio.role': 'Personal project',
+    'project.planestudio.desc': 'Web platform for university students to track their academic progress. Interactive curriculum map with prerequisites, dual GPA, status filters, statistics, and multi-degree support. Used by UNLP students.',
+    'project.planestudio.link.web': 'Live site',
+    'project.planestudio.link.code': 'Code',
     'project.roxana.role': 'Personal project',
     'project.roxana.desc': 'Complete e-commerce for a gift shop in La Plata, currently in production. Product catalog, shopping cart, WhatsApp checkout, admin panel, email notifications, and dark mode.',
     'project.roxana.link.web': 'Live site',
@@ -115,6 +123,20 @@ const translations = {
 
 const projectDataI18n = {
   es: {
+    planestudio: {
+      role: 'Proyecto propio', title: 'Mi Plan de Estudio',
+      desc: 'Plataforma web para que estudiantes universitarios visualicen su avance académico. Malla curricular interactiva con correlativas, doble promedio, filtros por estado, estadísticas y soporte multi-carrera. Usada por alumnos de la UNLP.',
+      tags: ['React', 'Vite', 'Supabase', 'Vercel', 'PostgreSQL'],
+      links: [{ label: 'Web en vivo', url: 'https://miplandeestudio.com' }, { label: 'Código', url: 'https://github.com/AgustinManrique/plan-estudios' }],
+      gradient: 'linear-gradient(135deg, #34d399, #059669, #10b981)',
+      slides: [
+        { title: 'Landing Page', desc: 'Página de inicio con presentación del producto, llamada a la acción para registro y preview del dashboard con estadísticas reales.', image: 'images/projects/planestudio-screen1.png' },
+        { title: 'Dashboard — Mi Plan', desc: 'Panel principal con estadísticas de aprobadas, promedio sin aplazos, regulares y avance. Barra de progreso con desglose por estado y sección de materias optativas.', image: 'images/projects/planestudio-screen2.png' },
+        { title: 'Materias por Año', desc: 'Vista de materias organizadas por año con badges de estado, filtros (Aprobadas, Regulares, Cursando, Pendientes, Bloqueadas), buscador y notas. Incluye el fix de libre aprobada.', image: 'images/projects/planestudio-screen3.png' },
+        { title: 'Malla Curricular', desc: 'Visualización completa de la carrera por columnas de año. Al hacer hover sobre una materia se resaltan las correlativas necesarias y las que habilita al aprobarla.', image: 'images/projects/planestudio-screen4.png' },
+        { title: 'Estadísticas', desc: 'Vista de estadísticas con promedio sin aplazos y general, nota más alta/baja, finales rendidos, distribución de notas por histograma y avance por año.', image: 'images/projects/planestudio-screen5.png' },
+      ],
+    },
     roxana: {
       role: 'Proyecto propio', title: 'Roxana Aromaterapia',
       desc: 'E-commerce completo para una regalería en La Plata, actualmente en producción. Catálogo de productos, carrito de compras, checkout vía WhatsApp, panel de administración, notificaciones por email y modo oscuro.',
@@ -182,6 +204,20 @@ const projectDataI18n = {
     },
   },
   en: {
+    planestudio: {
+      role: 'Personal project', title: 'Mi Plan de Estudio',
+      desc: 'Web platform for university students to track their academic progress. Interactive curriculum map with prerequisites, dual GPA, status filters, statistics, and multi-degree support. Used by UNLP students.',
+      tags: ['React', 'Vite', 'Supabase', 'Vercel', 'PostgreSQL'],
+      links: [{ label: 'Live site', url: 'https://miplandeestudio.com' }, { label: 'Code', url: 'https://github.com/AgustinManrique/plan-estudios' }],
+      gradient: 'linear-gradient(135deg, #34d399, #059669, #10b981)',
+      slides: [
+        { title: 'Landing Page', desc: 'Home page with product presentation, registration call-to-action, and a dashboard preview with real statistics.', image: 'images/projects/planestudio-screen1.png' },
+        { title: 'Dashboard — My Plan', desc: 'Main panel with approved subjects count, GPA without failures, regular subjects, and progress. Progress bar with status breakdown and optional subjects section.', image: 'images/projects/planestudio-screen2.png' },
+        { title: 'Subjects by Year', desc: 'Subjects organized by year with status badges, filters (Approved, Regular, In Progress, Pending, Blocked), search bar, and grades. Includes the free-approved fix.', image: 'images/projects/planestudio-screen3.png' },
+        { title: 'Curriculum Map', desc: 'Full degree visualization by year columns. Hovering over a subject highlights its prerequisites and what it enables upon approval.', image: 'images/projects/planestudio-screen4.png' },
+        { title: 'Statistics', desc: 'Statistics view with GPA without failures and overall, highest/lowest grade, finals taken, grade distribution histogram, and progress by year.', image: 'images/projects/planestudio-screen5.png' },
+      ],
+    },
     roxana: {
       role: 'Personal project', title: 'Roxana Aromaterapia',
       desc: 'Complete e-commerce for a gift shop in La Plata, currently in production. Product catalog, shopping cart, WhatsApp checkout, admin panel, email notifications, and dark mode.',

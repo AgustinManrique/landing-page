@@ -668,6 +668,7 @@ ul { list-style: none; }
 .grad-3 { background: linear-gradient(135deg, #34d399, #22d3ee); }
 .grad-4 { background: linear-gradient(135deg, #f97316, #ef4444); }
 .grad-5 { background: linear-gradient(135deg, #eab308, #f97316); }
+.grad-6 { background: linear-gradient(135deg, #34d399, #059669, #10b981); }
 
 .project-icon {
   position: relative;
