@@ -127,7 +127,7 @@ const projectDataI18n = {
       desc: 'Plataforma web para que estudiantes universitarios visualicen su avance académico. Malla curricular interactiva con correlativas, doble promedio, filtros por estado, estadísticas y soporte multi-carrera.',
       tags: ['React', 'Vite', 'Supabase', 'Vercel', 'PostgreSQL'],
       links: [{ label: 'Web en vivo', url: 'https://miplandeestudio.com' }, { label: 'Código', url: 'https://github.com/AgustinManrique/plan-estudios' }],
-      gradient: 'linear-gradient(135deg, #34d399, #059669, #10b981)',
+      gradient: 'linear-gradient(135deg, #81b29a, #6a9583)',
       slides: [
         { title: 'Landing Page', desc: 'Página de inicio con presentación del producto y preview del dashboard.', image: 'images/projects/planestudio-screen1.png' },
         { title: 'Dashboard', desc: 'Panel principal con estadísticas de aprobadas, promedio y avance.', image: 'images/projects/planestudio-screen2.png' },
@@ -141,7 +141,7 @@ const projectDataI18n = {
       desc: 'E-commerce completo para regalería en La Plata. Catálogo, carrito, checkout WhatsApp, panel admin, notificaciones y modo oscuro.',
       tags: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'WhatsApp API', 'Railway'],
       links: [{ label: 'Web en vivo', url: 'https://www.roxanaaromaterapia.com' }, { label: 'Código', url: 'https://github.com/AgustinManrique/roxana-aromaterapia' }],
-      gradient: 'linear-gradient(135deg, #818cf8, #c084fc, #f472b6)',
+      gradient: 'linear-gradient(135deg, #e07a5f, #e9967a, #f0b49a)',
       slides: [
         { title: 'Catálogo', desc: 'Grid adaptativo, filtros por categoría, búsqueda en tiempo real y modo oscuro.', icon: 'grid' },
         { title: 'Carrito', desc: 'Drawer lateral con productos, control de cantidades y cálculo de total.', icon: 'cart' },
@@ -155,7 +155,7 @@ const projectDataI18n = {
       desc: 'Sitio institucional para estudio de arquitectura. Showcase de proyectos con galería, panel admin con autenticación y animaciones Framer Motion.',
       tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Prisma', 'Supabase'],
       links: [{ label: 'Web en vivo', url: 'https://estudiojob.com' }],
-      gradient: 'linear-gradient(135deg, #0ea5e9, #2563eb, #1d4ed8)',
+      gradient: 'linear-gradient(135deg, #c9ab7c, #b08d5b)',
       slides: [
         { title: 'Página Principal', desc: 'Landing institucional con proyectos destacados.', icon: 'layout' },
         { title: 'Galería', desc: 'Showcase visual con filtros por categoría.', icon: 'grid' },
@@ -167,7 +167,7 @@ const projectDataI18n = {
       desc: 'Plataforma inmobiliaria con catálogo de propiedades, filtros avanzados, panel administrativo y diseño premium. Coordinando equipo de desarrollo.',
       tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Supabase', 'Framer Motion'],
       links: [],
-      gradient: 'linear-gradient(135deg, #a78bfa, #7c3aed, #6d28d9)',
+      gradient: 'linear-gradient(135deg, #e9967a, #d97757)',
       slides: [
         { title: 'Catálogo', desc: 'Propiedades con filtros avanzados por tipo, ubicación y precio.', icon: 'grid' },
         { title: 'Detalle', desc: 'Vista con galería, mapa, características y formulario de consulta.', icon: 'file-text' },
@@ -178,7 +178,7 @@ const projectDataI18n = {
       role: 'Proyecto académico', title: 'Maps Asesores',
       desc: 'E-commerce para aseguradora con catálogo de seguros, pagos vía MercadoPago/Stripe, chatbot integrado, panel admin y dashboard de métricas.',
       tags: ['React', 'Node.js', 'Prisma', 'Docker', 'MercadoPago', 'Stripe'],
-      links: [], gradient: 'linear-gradient(135deg, #f97316, #ef4444)',
+      links: [], gradient: 'linear-gradient(135deg, #e07a5f, #c25a3f)',
       slides: [
         { title: 'Catálogo', desc: 'Seguros organizados por categoría con comparador.', icon: 'grid' },
         { title: 'Pagos', desc: 'Checkout con MercadoPago y Stripe integrados.', icon: 'credit-card' },
@@ -189,7 +189,7 @@ const projectDataI18n = {
       role: 'Proyecto académico', title: 'PAICAT',
       desc: 'Sistema de gestión del ingreso para UTN FRLP. Control de asistencia, notas, reportes y administración de cursadas.',
       tags: ['Laravel', 'MariaDB', 'Tailwind', 'Alpine.js'],
-      links: [], gradient: 'linear-gradient(135deg, #22d3ee, #818cf8)',
+      links: [], gradient: 'linear-gradient(135deg, #e9c46a, #e07a5f)',
       slides: [
         { title: 'Asistencia', desc: 'Control de asistencia por comisión con vista diaria y semanal.', icon: 'clipboard-list' },
         { title: 'Notas', desc: 'Carga y gestión de notas con cálculo de promedios.', icon: 'edit-3' },
@@ -200,7 +200,7 @@ const projectDataI18n = {
       role: 'Proyecto personal', title: 'TaskTracker',
       desc: 'Aplicación de gestión de tareas con vista kanban, drag & drop, modo oscuro, filtros y API REST.',
       tags: ['Django', 'DRF', 'Tailwind', 'SQLite'],
-      links: [], gradient: 'linear-gradient(135deg, #34d399, #22d3ee)',
+      links: [], gradient: 'linear-gradient(135deg, #81b29a, #a7c4b5)',
       slides: [
         { title: 'Kanban', desc: 'Vista de tareas en columnas con drag & drop.', icon: 'columns' },
         { title: 'API REST', desc: 'Endpoints documentados con Django REST Framework.', icon: 'api' },
@@ -211,7 +211,7 @@ const projectDataI18n = {
       role: 'Proyecto personal', title: 'Torneo de Bar',
       desc: 'Plataforma para torneos de pool y fútbol con sistema de brackets, tabla de posiciones y mini-juegos con motor de físicas.',
       tags: ['HTML5', 'CSS3', 'JavaScript', 'Canvas'],
-      links: [], gradient: 'linear-gradient(135deg, #eab308, #f97316)',
+      links: [], gradient: 'linear-gradient(135deg, #e9c46a, #d99a4e)',
       slides: [
         { title: 'Brackets', desc: 'Sistema de eliminación directa con actualización en tiempo real.', icon: 'trophy' },
         { title: 'Tabla', desc: 'Rankings con puntos, partidos jugados y diferencia de goles.', icon: 'table' },
@@ -225,7 +225,7 @@ const projectDataI18n = {
       desc: 'Web platform for university students to track academic progress. Interactive curriculum map with prerequisites, dual GPA, filters, statistics, and multi-degree support.',
       tags: ['React', 'Vite', 'Supabase', 'Vercel', 'PostgreSQL'],
       links: [{ label: 'Live site', url: 'https://miplandeestudio.com' }, { label: 'Code', url: 'https://github.com/AgustinManrique/plan-estudios' }],
-      gradient: 'linear-gradient(135deg, #34d399, #059669, #10b981)',
+      gradient: 'linear-gradient(135deg, #81b29a, #6a9583)',
       slides: [
         { title: 'Landing Page', desc: 'Home page with product presentation and dashboard preview.', image: 'images/projects/planestudio-screen1.png' },
         { title: 'Dashboard', desc: 'Main panel with approved subjects, GPA and progress.', image: 'images/projects/planestudio-screen2.png' },
@@ -239,7 +239,7 @@ const projectDataI18n = {
       desc: 'Complete e-commerce for a gift shop. Product catalog, cart, WhatsApp checkout, admin panel, email notifications and dark mode.',
       tags: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'WhatsApp API', 'Railway'],
       links: [{ label: 'Live site', url: 'https://www.roxanaaromaterapia.com' }, { label: 'Code', url: 'https://github.com/AgustinManrique/roxana-aromaterapia' }],
-      gradient: 'linear-gradient(135deg, #818cf8, #c084fc, #f472b6)',
+      gradient: 'linear-gradient(135deg, #e07a5f, #e9967a, #f0b49a)',
       slides: [
         { title: 'Catalog', desc: 'Adaptive grid, category filters, real-time search and dark mode.', icon: 'grid' },
         { title: 'Cart', desc: 'Side drawer with quantity controls and total calculation.', icon: 'cart' },
@@ -253,7 +253,7 @@ const projectDataI18n = {
       desc: 'Institutional website for architecture studio. Project showcase with gallery, admin panel with authentication, and Framer Motion animations.',
       tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Prisma', 'Supabase'],
       links: [{ label: 'Live site', url: 'https://estudiojob.com' }],
-      gradient: 'linear-gradient(135deg, #0ea5e9, #2563eb, #1d4ed8)',
+      gradient: 'linear-gradient(135deg, #c9ab7c, #b08d5b)',
       slides: [
         { title: 'Home Page', desc: 'Institutional landing with featured projects.', icon: 'layout' },
         { title: 'Gallery', desc: 'Visual showcase with category filters.', icon: 'grid' },
@@ -264,7 +264,7 @@ const projectDataI18n = {
       role: 'Team lead', title: 'Peirano Propiedades',
       desc: 'Real estate platform with property catalog, advanced filters, admin panel and premium design. Leading the development team.',
       tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Supabase', 'Framer Motion'],
-      links: [], gradient: 'linear-gradient(135deg, #a78bfa, #7c3aed, #6d28d9)',
+      links: [], gradient: 'linear-gradient(135deg, #e9967a, #d97757)',
       slides: [
         { title: 'Catalog', desc: 'Properties with advanced filters by type, location and price.', icon: 'grid' },
         { title: 'Detail', desc: 'Gallery, map, features and inquiry form.', icon: 'file-text' },
@@ -275,7 +275,7 @@ const projectDataI18n = {
       role: 'Academic project', title: 'Maps Asesores',
       desc: 'Insurance e-commerce with product catalog, MercadoPago/Stripe payments, integrated chatbot, admin panel and metrics dashboard.',
       tags: ['React', 'Node.js', 'Prisma', 'Docker', 'MercadoPago', 'Stripe'],
-      links: [], gradient: 'linear-gradient(135deg, #f97316, #ef4444)',
+      links: [], gradient: 'linear-gradient(135deg, #e07a5f, #c25a3f)',
       slides: [
         { title: 'Catalog', desc: 'Insurance products by category with comparator.', icon: 'grid' },
         { title: 'Payments', desc: 'Checkout with MercadoPago and Stripe.', icon: 'credit-card' },
@@ -286,7 +286,7 @@ const projectDataI18n = {
       role: 'Academic project', title: 'PAICAT',
       desc: 'Enrollment management system for UTN FRLP. Attendance tracking, grades, reports and course administration.',
       tags: ['Laravel', 'MariaDB', 'Tailwind', 'Alpine.js'],
-      links: [], gradient: 'linear-gradient(135deg, #22d3ee, #818cf8)',
+      links: [], gradient: 'linear-gradient(135deg, #e9c46a, #e07a5f)',
       slides: [
         { title: 'Attendance', desc: 'Daily and weekly attendance tracking by section.', icon: 'clipboard-list' },
         { title: 'Grades', desc: 'Grade management with average calculation.', icon: 'edit-3' },
@@ -297,7 +297,7 @@ const projectDataI18n = {
       role: 'Personal project', title: 'TaskTracker',
       desc: 'Task management app with kanban view, drag & drop, dark mode, filters and REST API.',
       tags: ['Django', 'DRF', 'Tailwind', 'SQLite'],
-      links: [], gradient: 'linear-gradient(135deg, #34d399, #22d3ee)',
+      links: [], gradient: 'linear-gradient(135deg, #81b29a, #a7c4b5)',
       slides: [
         { title: 'Kanban', desc: 'Task board with drag & drop columns.', icon: 'columns' },
         { title: 'REST API', desc: 'Documented endpoints with Django REST Framework.', icon: 'api' },
@@ -308,7 +308,7 @@ const projectDataI18n = {
       role: 'Personal project', title: 'Torneo de Bar',
       desc: 'Platform for pool and foosball tournaments with bracket system, standings and mini-games with physics engine.',
       tags: ['HTML5', 'CSS3', 'JavaScript', 'Canvas'],
-      links: [], gradient: 'linear-gradient(135deg, #eab308, #f97316)',
+      links: [], gradient: 'linear-gradient(135deg, #e9c46a, #d99a4e)',
       slides: [
         { title: 'Brackets', desc: 'Single elimination system with real-time updates.', icon: 'trophy' },
         { title: 'Standings', desc: 'Rankings with points, matches and goal difference.', icon: 'table' },
@@ -514,13 +514,26 @@ class TextScramble {
   _update() {
     let output = '';
     let complete = 0;
+    let inWord = false;
 
     for (let i = 0; i < this.queue.length; i++) {
       const { to, start, end } = this.queue[i];
 
+      // A space ends the current word and is the only breakable point,
+      // so words never split mid-word (no lonely "e" on the next line).
+      if (to === ' ') {
+        if (inWord) { output += '</span>'; inWord = false; }
+        output += ' ';
+        complete++;
+        continue;
+      }
+
+      // Wrap each word so it stays together as a single inline-block unit.
+      if (!inWord) { output += '<span class="word">'; inWord = true; }
+
       if (this.frame >= end) {
         complete++;
-        output += `<span class="char revealed">${to === ' ' ? '&nbsp;' : to}</span>`;
+        output += `<span class="char revealed">${to}</span>`;
       } else if (this.frame >= start) {
         if (!this.queue[i].char || Math.random() < 0.28) {
           this.queue[i].char = this.chars[Math.floor(Math.random() * this.chars.length)];
@@ -530,6 +543,7 @@ class TextScramble {
         output += `<span class="char">&nbsp;</span>`;
       }
     }
+    if (inWord) output += '</span>';
 
     this.el.innerHTML = output;
 
@@ -689,7 +703,7 @@ class ParticlesEffect {
       p.vx *= 0.999; p.vy *= 0.999;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(129, 140, 248, 0.8)';
+      ctx.fillStyle = 'rgba(224, 122, 95, 0.8)';
       ctx.fill();
     }
     for (let i = 0; i < this.particles.length; i++) {
@@ -700,7 +714,7 @@ class ParticlesEffect {
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(129, 140, 248, ${(1 - d / connectDist) * 0.4})`;
+          ctx.strokeStyle = `rgba(224, 122, 95, ${(1 - d / connectDist) * 0.4})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -734,10 +748,10 @@ class WavesEffect {
     ctx.clearRect(0, 0, width, height);
     this.time += speed * 0.005;
     const colors = [
-      'rgba(129, 140, 248, 0.3)', 'rgba(192, 132, 252, 0.25)',
-      'rgba(34, 211, 238, 0.2)', 'rgba(52, 211, 153, 0.2)',
-      'rgba(249, 115, 22, 0.15)', 'rgba(244, 114, 182, 0.2)',
-      'rgba(129, 140, 248, 0.15)', 'rgba(192, 132, 252, 0.1)',
+      'rgba(224, 122, 95, 0.30)', 'rgba(233, 196, 106, 0.24)',
+      'rgba(129, 178, 154, 0.22)', 'rgba(200, 100, 63, 0.20)',
+      'rgba(201, 171, 124, 0.18)', 'rgba(233, 150, 122, 0.20)',
+      'rgba(224, 122, 95, 0.14)', 'rgba(233, 196, 106, 0.10)',
     ];
     for (let w = 0; w < waveCount; w++) {
       ctx.beginPath();
@@ -780,7 +794,7 @@ class GravityEffect {
     for (let i = 0; i < 15; i++) this._spawn();
   }
   _spawn(x, y) {
-    const colors = ['#818cf8', '#c084fc', '#22d3ee', '#34d399', '#f97316', '#f472b6'];
+    const colors = ['#e07a5f', '#e9c46a', '#81b29a', '#e9967a', '#d99a4e', '#c8643f'];
     this.balls.push({
       x: x ?? Math.random() * this.canvas.width,
       y: y ?? Math.random() * this.canvas.height * 0.3,
@@ -849,7 +863,7 @@ class MatrixEffect {
     const ctx = this.ctx;
     const { speed, density } = this.params;
     const fontSize = Math.max(12, density * 0.7);
-    ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
+    ctx.fillStyle = 'rgba(20, 17, 15, 0.05)';
     ctx.fillRect(0, 0, width, height);
     ctx.font = `${fontSize}px 'JetBrains Mono', monospace`;
     const chars = 'アイウエオカキクケコサシスセソタチツテト0123456789ABCDEF';
@@ -858,7 +872,7 @@ class MatrixEffect {
       const x = i * density;
       const char = chars[Math.floor(Math.random() * chars.length)];
       const dist = Math.hypot(x - this.mouse.x, col.y - this.mouse.y);
-      ctx.fillStyle = `rgba(52, 211, 153, ${dist < 100 ? 1 : 0.6})`;
+      ctx.fillStyle = `rgba(233, 196, 106, ${dist < 100 ? 1 : 0.6})`;
       ctx.fillText(char, x, col.y);
       col.y += col.speed * speed;
       if (col.y > height) { col.y = 0; col.speed = Math.random() * 2 + 1; }
@@ -896,7 +910,7 @@ class StarfieldEffect {
     const { speed } = this.params;
     const cx = width * this.mouse.x;
     const cy = height * this.mouse.y;
-    ctx.fillStyle = 'rgba(5, 5, 5, 0.15)';
+    ctx.fillStyle = 'rgba(20, 17, 15, 0.15)';
     ctx.fillRect(0, 0, width, height);
     for (const s of this.stars) {
       s.z -= speed * 0.003;
@@ -907,7 +921,7 @@ class StarfieldEffect {
       if (sx < 0 || sx > width || sy < 0 || sy > height) continue;
       ctx.beginPath();
       ctx.arc(sx, sy, Math.max(0.5, r), 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 255, 255, ${1 - s.z})`;
+      ctx.fillStyle = `rgba(237, 232, 227, ${1 - s.z})`;
       ctx.fill();
     }
   }
